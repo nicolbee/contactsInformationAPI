@@ -47,4 +47,19 @@ public class UserService {
 		        return userRepository.save(existingUser);
 		    }).orElse(null);
 	}
+
+	public User deleteUser(String id, User deleteUser) {
+		return userRepository.findById(id).map(existingUser -> {
+			if (deleteUser.getName() !=null) {
+				existingUser.setName(deleteUser.getName());
+			}
+			if (deleteUser.getAge() != 0) {
+				existingUser.setAge(deleteUser.getAge());
+			}
+			if (deleteUser.getEmail() !=null) {
+				existingUser.setEmail(deleteUser.getEmail()); 
+			}
+			return userRepository.save(deleteUser);
+		}).orElse(null);
+	}
 }
