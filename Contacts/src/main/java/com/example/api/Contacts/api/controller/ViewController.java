@@ -23,6 +23,6 @@ public class ViewController {
     public String viewUsers(Model model) {
         List<User> users = userService.getAllUsers();
         model.addAttribute("users", users);
-        return "users"; // maps to users.html in /resources/templates/
+        return "users"; 
     }
 }

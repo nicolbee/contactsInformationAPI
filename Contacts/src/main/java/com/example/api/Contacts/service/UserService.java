@@ -19,17 +19,17 @@ public class UserService {
 
     // Get all users
     public List<User> getAllUsers() {
-        return userRepository.findAll(); // MongoDB fetch all users
+        return userRepository.findAll(); 
     }
 
-    // Get user by ID (using String for MongoDB ObjectId)
+   
     public User getUser(String id) {
-        return userRepository.findById(id).orElse(null);  // MongoDB find user by String ID
+        return userRepository.findById(id).orElse(null);  
     }
 
     // Add user
     public User addUser(User user) {
-        return userRepository.save(user);  // Save user to MongoDB
+        return userRepository.save(user);  
     }
 
 	
@@ -38,7 +38,7 @@ public class UserService {
 		        if (partialUser.getName() != null) {
 		            existingUser.setName(partialUser.getName());
 		        }
-		        if (partialUser.getAge() != 0) { // assuming 0 means "not provided"
+		        if (partialUser.getAge() != 0) { 
 		            existingUser.setAge(partialUser.getAge());
 		        }
 		        if (partialUser.getEmail() != null) {

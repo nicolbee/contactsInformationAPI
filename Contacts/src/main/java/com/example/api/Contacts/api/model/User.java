@@ -5,12 +5,12 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document(collection = "contacts")
 public class User {
 
-    private String id;  // Change to String to match MongoDB's ObjectId type
+    private String id;  
     private String name;
     private int age;
     private String email;
 
-    // Constructor
+    
     public User(String id, String name, int age, String email) {
         this.id = id;
         this.name = name;
@@ -18,7 +18,7 @@ public class User {
         this.email = email;
     }
 
-    // Getters and Setters
+    
     public String getId() {
         return id;
     }
