@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Users List</title>
+</head>
+<body>
+    <h1>Users</h1>
+    <ul>
+        <li th:each="user : ${users}">
+            <strong th:text="${user.name}"></strong> - 
+            <span th:text="${user.age}"></span> years old - 
+            <a th:href="'mailto:' + ${user.email}" th:text="${user.email}"></a>
+        </li>
+    </ul>
+</body>
+</html>
