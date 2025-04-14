@@ -19,7 +19,7 @@ public class ViewController {
         this.userService = userService;
     }
 
-    @GetMapping("/view-users")
+    @GetMapping("/login")
     public String viewUsers(Model model) {
         List<User> users = userService.getAllUsers();
         model.addAttribute("users", users);
