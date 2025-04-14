@@ -22,7 +22,7 @@ public class ViewController {
     @GetMapping("/login")
     public String viewUsers(Model model) {
         List<User> users = userService.getAllUsers();
-        model.addAttribute("users", users);
-        return "users"; 
+        model.addAttribute("login", users);
+        return "login"; 
     }
 }
