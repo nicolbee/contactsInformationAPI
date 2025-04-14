@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign Up</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #e9ecef;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .signup-box {
+            background: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            width: 320px;
+        }
+
+        .signup-box h2 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .signup-box input[type="text"],
+        .signup-box input[type="email"],
+        .signup-box input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+
+        .signup-box button {
+            width: 100%;
+            padding: 10px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .signup-box button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="signup-box">
+        <h2>Sign Up</h2>
+        <form method="post" action="/signup">
+            <input type="text" name="name" placeholder="Name" required />
+            <input type="number" name="age" placeholder="Age" required />
+            <input type="email" name="email" placeholder="Email" required />
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+</body>
+</html>

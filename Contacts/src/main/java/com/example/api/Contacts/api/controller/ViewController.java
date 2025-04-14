@@ -25,4 +25,11 @@ public class ViewController {
         model.addAttribute("login", users);
         return "login"; 
     }
+    
+    @GetMapping("/signup")
+    public String viewSignUp(Model model) {
+    	List<User> users = userService.getAllUsers();
+    	model.addAttribute("signup", users);
+    	return "signup";
+    }
 }
